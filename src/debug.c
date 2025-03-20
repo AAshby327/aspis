@@ -2,11 +2,11 @@
 
 #include "debug.h"
 
-void disassemble_code_segment(CodeSegment* code_segment, const char* name) {
+void disassemble_code_sequence(CodeSequence* code_sequence, const char* name) {
     printf("== %s ==\n", name);
 
-    for (int offset = 0; offset < code_segment->count;) {
-        offset = disassemble_instruction(code_segment, offset);
+    for (int offset = 0; offset < code_sequence->count;) {
+        offset = disassemble_instruction(code_sequence, offset);
     }
 }
 
@@ -15,10 +15,10 @@ static int simple_instruction(const char* name, int offset) {
     return offset + 1;
 }
 
-int disassemble_instruction(CodeSegment* code_segment, int offset) {
+int disassemble_instruction(CodeSequence* code_sequence, int offset) {
     printf("%04d ", offset);
   
-    uint8_t instruction = code_segment->code[offset];
+    uint8_t instruction = code_sequence->code[offset];
     switch (instruction) {
         case OP_RETURN:
             return simple_instruction("OP_RETURN", offset);

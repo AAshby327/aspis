@@ -28,6 +28,7 @@ build/
 *.gcda
 *.gcno
 *.gcov
+bin/
 
 # IDEs and Editors
 .vscode/
