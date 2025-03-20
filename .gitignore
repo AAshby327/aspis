@@ -1,0 +1,35 @@
+# General
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.env
+.venv/
+dist/
+build/
+
+# C
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+*.dSYM/
+*.gcda
+*.gcno
+*.gcov
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-workspace
